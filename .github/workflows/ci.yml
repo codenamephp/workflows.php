@@ -28,7 +28,7 @@ jobs:
   test:
     strategy:
       matrix:
-        php-versions: ${{fromJSON(input.php-versions)}}
+        php-versions: ${{fromJSON(inputs.php-versions)}}
         prefer: ${{fromJSON(input.prefer-stability)}}
     name: Test with ${{ matrix.prefer }} dependency versions on PHP ${{ matrix.php-versions }}
     runs-on: ubuntu-latest
