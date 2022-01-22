@@ -1,0 +1,64 @@
+
+name: CI
+
+on:
+  workflow_call:
+    inputs:
+      php-versions:
+        description: 'The php versions to test as JSON array. Will be converted and used to create a matrix.'
+        default: '["8.1"]'
+        required: true
+        type: string
+      prefer-stability:
+        description: 'The staibility of the packages to use. Will be converted and used to create a matrix.'
+        default: '["prefer-lowest", "prefer-stable"]'
+        required: true
+        type: string
+      test-command:
+        description: 'The command to run for executing tests'
+        default: 'composer ci-all'
+        required: true
+        type: string
+        
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+  
+jobs:
+  test:
+    strategy:
+      matrix:
+        php-versions: ${{fromJSON(input.php-versions)}}
+        prefer: ${{fromJSON(input.prefer-stability)}}
+    name: Test with ${{ matrix.prefer }} dependency versions on PHP ${{ matrix.php-versions }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          coverage: xdebug
+
+      - name: Validate composer.json
+        run: composer validate
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - name: Setup cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}-${{ matrix.prefer }}-
+          restore-keys: ${{ runner.os }}-composer-${{ matrix.prefer }}-
+
+      - name: Install dependencies
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer update --prefer-dist --no-ansi --no-interaction --no-progress --${{ matrix.prefer }}
+
+      - name: Run CI tools
+        run: ${{inputs.test-command}}
