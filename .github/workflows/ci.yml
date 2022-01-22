@@ -12,12 +12,10 @@ on:
       prefer-stability:
         description: 'The staibility of the packages to use. Will be converted and used to create a matrix.'
         default: '["prefer-lowest", "prefer-stable"]'
-        required: true
         type: string
       test-command:
         description: 'The command to run for executing tests'
         default: 'composer ci-all'
-        required: true
         type: string
         
 concurrency:
