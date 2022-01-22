@@ -29,7 +29,7 @@ jobs:
     strategy:
       matrix:
         php-versions: ${{fromJSON(inputs.php-versions)}}
-        prefer: ${{fromJSON(input.prefer-stability)}}
+        prefer: ${{fromJSON(inputs.prefer-stability)}}
     name: Test with ${{ matrix.prefer }} dependency versions on PHP ${{ matrix.php-versions }}
     runs-on: ubuntu-latest
 
