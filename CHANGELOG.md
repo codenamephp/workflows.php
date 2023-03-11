@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.0.1](https://github.com/codenamephp/workflows.php/tree/0.0.1) (2023-03-11)
+## [1.0.0](https://github.com/codenamephp/workflows.php/tree/1.0.0) (2023-03-11)
 
-[Full Changelog](https://github.com/codenamephp/workflows.php/compare/33e270a58fbce476ae333c525ddb23ec024653e4...0.0.1)
+[Full Changelog](https://github.com/codenamephp/workflows.php/compare/33e270a58fbce476ae333c525ddb23ec024653e4...1.0.0)
 
 **Merged pull requests:**
 
