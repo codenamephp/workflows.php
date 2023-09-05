@@ -1,21 +1,29 @@
 # Changelog
 
+## [1.0.2](https://github.com/codenamephp/workflows.php/tree/1.0.2) (2023-09-05)
+
+[Full Changelog](https://github.com/codenamephp/workflows.php/compare/1...1.0.2)
+
+**Merged pull requests:**
+
+- Bump actions/checkout from 3 to 4 [\#4](https://github.com/codenamephp/workflows.php/pull/4) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [1](https://github.com/codenamephp/workflows.php/tree/1) (2023-09-05)
+
+[Full Changelog](https://github.com/codenamephp/workflows.php/compare/1.0.1...1)
+
 ## [1.0.1](https://github.com/codenamephp/workflows.php/tree/1.0.1) (2023-09-05)
 
-[Full Changelog](https://github.com/codenamephp/workflows.php/compare/1...1.0.1)
+[Full Changelog](https://github.com/codenamephp/workflows.php/compare/1.0...1.0.1)
+
+## [1.0](https://github.com/codenamephp/workflows.php/tree/1.0) (2023-09-05)
+
+[Full Changelog](https://github.com/codenamephp/workflows.php/compare/1.0.0...1.0)
 
 **Merged pull requests:**
 
 - Bump actions/cache from 2 to 3 [\#3](https://github.com/codenamephp/workflows.php/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/checkout from 2 to 3 [\#2](https://github.com/codenamephp/workflows.php/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-## [1](https://github.com/codenamephp/workflows.php/tree/1) (2023-03-11)
-
-[Full Changelog](https://github.com/codenamephp/workflows.php/compare/1.0...1)
-
-## [1.0](https://github.com/codenamephp/workflows.php/tree/1.0) (2023-03-11)
-
-[Full Changelog](https://github.com/codenamephp/workflows.php/compare/1.0.0...1.0)
 
 ## [1.0.0](https://github.com/codenamephp/workflows.php/tree/1.0.0) (2023-03-11)
 
