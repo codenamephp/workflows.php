@@ -1,11 +1,12 @@
 # Changelog
 
-## [1.0.3](https://github.com/codenamephp/workflows.php/tree/1.0.3) (2024-01-18)
+## [1.0.3](https://github.com/codenamephp/workflows.php/tree/1.0.3) (2025-08-12)
 
 [Full Changelog](https://github.com/codenamephp/workflows.php/compare/1...1.0.3)
 
 **Merged pull requests:**
 
+- Bump actions/checkout from 4 to 5 [\#6](https://github.com/codenamephp/workflows.php/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/cache from 3 to 4 [\#5](https://github.com/codenamephp/workflows.php/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1](https://github.com/codenamephp/workflows.php/tree/1) (2023-09-05)
